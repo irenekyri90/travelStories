@@ -1,10 +1,26 @@
-html, body {
+/* html, body {
   margin: 0;
   padding: 0;
-}
+} */
 
 .App {
-  padding: 20px;;
+  
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* .container {
+  margin: 0;
+  padding: 0;
+} */
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+  width: 100%;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 nav.navbar { 

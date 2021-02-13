@@ -34,6 +34,17 @@ class Private extends Component {
         <h2>Welcome {this.props.user ? this.props.user.username : null }</h2> 
         */}
         <img src={this.props.user.image} alt=""/>
+
+        <div>
+
+      <form action="">
+        <input type="text"/>
+        <button type="submit" name="name">Add Story</button>
+      </form>
+
+        
+
+        </div>
         
 
       </div>
