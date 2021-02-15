@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { withAuth } from './../context/auth-context';
 import axios from 'axios';
+import AddStory from "../components/AddStory/AddStory";
 
 
 class Private extends Component {
@@ -37,11 +38,8 @@ class Private extends Component {
 
         <div>
 
-      <form action="">
-        <input type="text"/>
-        <button type="submit" name="name">Add Story</button>
-      </form>
 
+        <AddStory />
         
 
         </div>
@@ -54,3 +52,4 @@ class Private extends Component {
 
 
 export default withAuth(Private);
+
