@@ -5,9 +5,17 @@ import AddStory from "../components/AddStory/AddStory";
 
 
 class Private extends Component {
+  state = {
+    showForm: false
+  }
   
   componentDidMount() {
+    axios.get("http://localhost:5000/api/stories")
+      .then(res => {
+        console.log("PLEEAASSSEEEEe WOOOrkkkkkkkkkkKKK!!!")
+      })
 
+      
     axios
       .get("http://localhost:5000/api/user", {
         withCredentials: true,
@@ -25,6 +33,28 @@ class Private extends Component {
     // });
   }
 
+  // addOneStory = () => {
+  //   axios.post('http://localhost:5000/api/stories', {title, location, image, description, writtenBy}, { withCredentials: true })
+  //     .then((response) => {
+  //       console.log(response);
+  //       console.log(response.data);
+
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  //   }
+  
+
+
+
+
+
+  toggleForm = () => {
+    this.setState({ showForm: !this.state.showForm });
+    console.log(this.state.showForm);
+  }
+
   render() {
     console.log(this.props.user.image);
     return (
@@ -40,6 +70,8 @@ class Private extends Component {
 
 
         <AddStory />
+
+        <button onClick={this.toggleForm}>ADD A STORY</button>
         
 
         </div>

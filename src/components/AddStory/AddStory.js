@@ -87,8 +87,6 @@ class AddStory extends Component {
           </span>
 
 
-
-
           <label for="description">Describe your experience</label>
           <input name="description" type="text" value={this.state.description} onChange={this.handleInput}/>
 
