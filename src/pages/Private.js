@@ -68,8 +68,9 @@ class Private extends Component {
 
         <div>
 
-
-        <AddStory />
+        {this.state.showForm ? 
+        <AddStory /> : null
+        }
 
         <button onClick={this.toggleForm}>ADD A STORY</button>
         
